@@ -3,7 +3,7 @@ import { StandaloneSearchBox, LoadScript } from '@react-google-maps/api';
 
 // Google Maps API libraries to load
 const libraries = ['places'];
-
+const goolekey = process.env.GOOGLE_API_KEY;
 const PlaceComponent = ({ setAddress }) => {
   const inputRef = useRef();
 
@@ -23,7 +23,7 @@ const PlaceComponent = ({ setAddress }) => {
 
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyADWkHebsKttRyczeAio9LdgISz-r5rIAg" // Replace with your own API key
+      googleMapsApiKey={goolekey} // Replace with your own API key
       libraries={libraries}
     >
       <StandaloneSearchBox
